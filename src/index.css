@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+    
+    --color-primary:#0056FF ;
+     --color-hover:#2277FF;
+    --color-bande:#EDEDED;
+    --color-bleu: #00C6FF;
+    
+    --font-titre:"SF Pro Display",sans-serif;
+    --font-titre2: "Figtree", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+::selection {
+  background-color: #0056FF · ;
+  color: #050A15;
+}
+
+:focus-visible {
+  outline: 2px solid #0056FF · ;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
