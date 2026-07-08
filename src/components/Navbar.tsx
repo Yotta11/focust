@@ -58,7 +58,7 @@ export default function Navbar() {
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X size={28} /> : <Menu size={52} />}
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
 
@@ -78,7 +78,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-base font-semibold text-navy-950"
+              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-base font-semibold text-[var(--color-roi)]"
             >
               Demander un devis
               <ArrowRight size={15} />

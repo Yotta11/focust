@@ -26,7 +26,7 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section id="accueil" className=" relative overflow-hidden bg-li">
+    <section id="accueil" className=" relative overflow-hidden bg-[linear-gradient(135deg,#E6F9FF_40%,#ffffff_100%)]">
       <div className="  pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(88, 163, 180, 0.15),transparent_45%)]" />
 
       <div className="relative mx-auto grid  gap-16 px-6 pb-20 pt-16 lg:grid-cols-[1.05fr,0.95fr] lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
@@ -70,40 +70,40 @@ export default function Hero() {
               {AVATARS.map((a) => (
                 <span
                   key={a.initials}
-                  className={`flex h-9 w-9 items-center justify-center rounded-full border-2 border-navy-950 text-[11px] font-bold ${a.color}`}
+                  className={`flex h-9 w-9 md:h-12 md:w-12 items-center justify-center rounded-full border-1 border-gray-900 text-[11px] font-bold ${a.color}`}
                 >
                   {a.initials}
                 </span>
               ))}
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-navy-950 bg-white/10 text-[11px] font-bold text-white">
+              <span className="flex h-9 w-9 md:h-12 md:w-12 items-center justify-center rounded-full border-2 border-gray-600 bg-white/10 text-[11px] font-bold text-black">
                 +
               </span>
             </div>
             <div>
-              <div className="flex items-center gap-1 text-sm font-semibold text-white">
+              <div className="flex items-center gap-1 text-sm font-semibold text-black">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={13} className="fill-yellow-400 text-yellow-400 " />
+                  <Star key={i} size={15} className="fill-yellow-400 text-yellow-400 " />
                 ))}
-                <span className="ml-1">4.9/5</span>
+                <span className="ml-1 lg:text-base">4.9/[var(--color-)] tex5</span>
               </div>
-              <p className="text-xs text-sand/60">40+ entreprises camerounaises accompagnées</p>
+              <p className="text-xs text-black">40+ entreprises camerounaises accompagnées</p>
             </div>
           </div>
         </div>
 
         {/* Right column — browser mockups */}
         <div className="relative  mx-auto  w-full max-w-2xl lg:max-w-none lg:w-full lg:mx-0"> 
-           <div className=" h-12 absolute -right-4 -top-6 hidden w-40 rotate-3 rounded-xl border border-white/10 bg-navy-800/80 p-3 text-[10px] font-semibold uppercase tracking-wide text-sky-soft shadow-2xl backdrop-blur sm:block">
+           <div className="absolute z-10 rotate-[15deg] h-10 mt-4 -right-4 -top-6 hidden w-40 rotate-3 rounded-xl border border-white/10 bg-[var(--color-bleu)] p-3 text-[10px] font-semibold uppercase tracking-wide text-white shadow-2xl backdrop-blur sm:block lg:flex justify-center items-center">
             Facebook Ads · Kamer Food
           </div>
 
 
 {/* images */}
-          <div className=" hidden md:flex  rounded-xl h-full w-full overflow-hidden">
+          <div className=" hidden  md:flex  rounded-xl h-full w-full overflow-hidden">
             <img
               src={images[current]}
               alt=""
-              className="w-full h-full object-cover transition-all duration-1000 opacity-60"
+              className="w-full h-full object-cover transition-all duration-1000 opacity-70"
             />
           </div>
 
@@ -153,15 +153,15 @@ export default function Hero() {
             </div>
           </div> */}
 
-          {/* <div className="absolute -left-6 top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-2xl bg-white shadow-xl sm:-left-8">
+          <div className=" hidden md:flex absolute -left-6 top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-2xl bg-white shadow-xl sm:-left-8">
             <Instagram size={24} className="text-[var(--color-primary)]" />
-          </div> */}
+          </div>
 
-          <div className="  hidden md:flex absolute -bottom-6 right-2 z-20 flex items-center gap-2 rounded-xl border border-white/10 bg-navy-800/90 px-4 py-3 shadow-2xl backdrop-blur sm:right-6">
-            <CheckCircle2 size={18} className="text-emerald-400" />
+          <div className="  hidden md:flex absolute -bottom-6 right-2 z-20 flex items-center gap-2 rounded-xl border border-white/10 bg-[var(--color-bleu)] px-4 py-3 shadow-2xl backdrop-blur sm:right-6">
+            <CheckCircle2 size={18} className="text-emerald-600" />
             <div className="text-xs">
               <p className="font-semibold text-white">Site livré · 12 jours</p>
-              <p className="text-sand/60">boutique-mama-eyenga.cm</p>
+              <p className="text-[var(--color-bande)]">boutique-mama-eyenga.cm</p>
             </div>
           </div>
         </div>

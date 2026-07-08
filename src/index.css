@@ -11,8 +11,9 @@ body {
     
     --color-primary:#0056FF ;
      --color-hover:#2277FF;
-    --color-bande:#EDEDED;
+    --color-bande:#ffffff;
     --color-bleu: #00C6FF;
+    --color-roi:#001A66 ;
     
     --font-titre:"SF Pro Display",sans-serif;
     --font-titre2: "Figtree", sans-serif;

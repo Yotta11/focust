@@ -25,28 +25,28 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-navy-950 py-24">
+    <section id="services" className="bg- py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-accent">
+          <span className="text-xs lg:text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-hover)]">
             Ce que nous faisons
           </span>
-          <h2 className="mt-4 text-balance font-display text-4xl font-semibold text-white sm:text-5xl">
+          <h2 className="mt-4 text-balance font-display text-4xl font-semibold text-black sm:text-5xl">
             Quatre leviers, un seul objectif&nbsp;: des clients réels.
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 ">
           {SERVICES.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group rounded-2xl border border-white/10 bg-navy-900/60 p-6 transition-colors hover:border-sky-accent/40 hover:bg-navy-900"
+              className="group hover:scale-[1.09]  hover:shadow-lg rounded-2xl border border-white/10 bg-gradient-to-r from-[#001A66] to-[#0056FF] p-6 transition-colors hover:border-sky-accent/40 hover:bg-navy-900"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-accent/15 text-sky-accent transition-colors group-hover:bg-sky-accent group-hover:text-navy-950">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-accent/15 text-[var(--color-bleu)] transition-colors group-hover:bg-[var(--color-bleu)] group-hover:text-[var(--color-roi)]">
                 <Icon size={20} />
               </div>
               <h3 className="mt-5 font-display text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-sand/60">{desc}</p>
+              <p className="mt-2 text-sm leading-relaxed text-gray-300">{desc}</p>
             </div>
           ))}
         </div>

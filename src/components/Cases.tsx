@@ -23,20 +23,20 @@ const CASES = [
 
 export default function Cases() {
   return (
-    <section id="realisations" className="border-y border-white/5 bg-navy-900/40 py-24">
+    <section id="realisations" className="border-y border-gray-300  w-full h-full  py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-accent">
+            <span className="text-xs lg:text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-hover)]">
               Réalisations
             </span>
-            <h2 className="mt-4 text-balance font-display text-4xl font-semibold text-white sm:text-5xl">
+            <h2 className="mt-4 text-balance font-display text-4xl font-semibold text-black sm:text-5xl">
               Des résultats qu’on peut vérifier.
             </h2>
           </div>
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-accent hover:text-sky-soft"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-hover)] hover:text-[var(--color-primary) hover:scale-[1.09]"
           >
             Discuter de mon projet
             <ArrowUpRight size={16} />
@@ -47,16 +47,16 @@ export default function Cases() {
           {CASES.map((c) => (
             <div
               key={c.name}
-              className="overflow-hidden rounded-2xl border border-white/10 bg-navy-950"
+              className="overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-roi)]"
             >
               <div className="flex items-center gap-2 border-b border-white/5 bg-navy-900 px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
                 <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
                 <span className="h-2 w-2 rounded-full bg-[#28c840]" />
-                <span className="ml-2 truncate text-[11px] text-sand/40">{c.url}</span>
+                <span className="ml-2 truncate text-[11px] text-gray-300">{c.url}</span>
               </div>
               <div className="p-6">
-                <span className="text-[11px] font-semibold uppercase tracking-wide text-sky-soft">
+                <span className="text-[11px] font-semibold uppercase tracking-wide text-[var(--color-bleu)]">
                   {c.tag}
                 </span>
                 <h3 className="mt-2 font-display text-xl font-semibold text-white">{c.name}</h3>
