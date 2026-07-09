@@ -8,6 +8,7 @@ interface FormState {
   message: string
 }
 
+
 const INITIAL_STATE: FormState = { name: '', company: '', email: '', message: '' }
 
 export default function Contact() {
