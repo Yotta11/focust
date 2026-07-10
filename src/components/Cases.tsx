@@ -34,6 +34,7 @@ export default function Cases() {
               Des résultats qu’on peut vérifier.
             </h2>
           </div>
+
           <a
             href="#contact"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-hover)] hover:text-[var(--color-primary) hover:scale-[1.09]"
@@ -49,6 +50,7 @@ export default function Cases() {
               key={c.name}
               className="overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-roi)]"
             >
+
               <div className="flex items-center gap-2 border-b border-white/5 bg-navy-900 px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
                 <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
