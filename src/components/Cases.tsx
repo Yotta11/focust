@@ -42,7 +42,6 @@ export default function Cases() {
             <ArrowUpRight size={16} />
           </a>
         </div>
-
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {CASES.map((c) => (
             <div
