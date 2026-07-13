@@ -21,6 +21,7 @@ const CASES = [
   },
 ]
 export default function Cases() {
+
   return (
     <section id="realisations" className="border-y border-gray-300  w-full h-full  py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -48,6 +49,7 @@ export default function Cases() {
               key={c.name}
               className="overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-roi)]"
             >
+
               <div className="flex items-center gap-2 border-b border-white/5 bg-navy-900 px-4 py-3">
                 <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
                 <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
