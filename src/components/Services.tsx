@@ -42,6 +42,7 @@ export default function Services() {
               key={title}
               className="group hover:scale-[1.09]  hover:shadow-lg rounded-2xl border border-white/10 bg-gradient-to-r from-[#001A66] to-[#0056FF] p-6 transition-colors hover:border-sky-accent/40 hover:bg-navy-900"
             >
+
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky-accent/15 text-[var(--color-bleu)] transition-colors group-hover:bg-[var(--color-bleu)] group-hover:text-[var(--color-roi)]">
                 <Icon size={20} />
               </div>

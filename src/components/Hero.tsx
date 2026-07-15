@@ -53,6 +53,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3.5 text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
             >
+
               Démarrer mon projet
               <ArrowRight size={16} />
             </a>
