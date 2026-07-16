@@ -20,6 +20,7 @@ const CASES = [
     url: 'nkolocosmetics.cm',
   },
 ]
+
 export default function Cases() {
 
   return (
@@ -64,6 +65,7 @@ export default function Cases() {
                 <p className="mt-3 text-sm text-sand/60">{c.result}</p>
               </div>
             </div>
+
           ))}
         </div>
       </div>
