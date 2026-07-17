@@ -27,7 +27,7 @@ export default function Navbar() {
           : 'bg-transparent border-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between lg:w-full  px-6 py-4 lg:px-0">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between lg:w-full  px-6 py-4 lg:px-1">
         <a href="#accueil" className="flex items-center gap-2 font-display text-3xl font-bold tracking-tight text-[#3FD0F2]">
           {/* <span className="inline-block h-2 w-2 rounded-full bg-sky-accent font-bold text-[#3FD0F2]" /> */}
           focust
@@ -63,14 +63,14 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy-950 px-6 pb-6 pt-2 lg:hidden">
+        <div className="border-t  border-white/10 bg-[var(--color-roi)] px-6 pb-6 pt-2 lg:hidden">
           <div className="flex flex-col gap-4">
             {LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-sand/80 hover:text-[var(--color-primary)]"
+                className="text-base  text-white hover:text-[var(--color-primary)]"
               >
                 {link.label}
               </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-base font-semibold text-[var(--color-roi)]"
+              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-base font-semibold text-[var(--color-primary)]"
             >
               Demander un devis
               <ArrowRight size={15} />

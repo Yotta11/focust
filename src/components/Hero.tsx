@@ -29,11 +29,11 @@ export default function Hero() {
     <section id="accueil" className=" relative overflow-hidden bg-[linear-gradient(135deg,#E6F9FF_40%,#ffffff_100%)]">
       <div className="  pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(88, 163, 180, 0.15),transparent_45%)]" />
 
-      <div className="relative mx-auto grid  gap-16 px-6 pb-20 pt-16 lg:grid-cols-[1.05fr,0.95fr] lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
+      <div className="relative mx-auto grid justify-center  md:grid-cols-2  gap-16 px-6 pb-20 pt-16 lg:grid-cols-[1.05fr,0.95fr] lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
         {/* Left column */}
-        <div className="max-w-xl ">
+        <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-hover)]  px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-hover)]">
-            <span className="h-1.5 w-1.5 rounded-full  bg-[var(--color-hover)]" />
+            <span className="md:h-1.5 md:w-1.5 rounded-full  bg-[var(--color-hover)]" />
             Agence digitale · Yaoundé
           </span>
 
@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3.5 text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center justify-center gap-2 md:h-16 rounded-full bg-[var(--color-primary)] px-6 py-3.5 md:text-sm lg:text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
             >
 
               Démarrer mon projet
@@ -59,7 +59,7 @@ export default function Hero() {
             </a>
             <a
               href="#realisations"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-primary)] px-6 py-3.5 text-base font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-bleu)]"
+              className="inline-flex items-center justify-center gap-2 md:h-16 rounded-full border border-[var(--color-primary)] px-6 py-3.5 md:text-sm text-base font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-bleu)]"
             >
               <Play size={14} />
               Voir nos réalisations
@@ -85,7 +85,7 @@ export default function Hero() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} size={15} className="fill-yellow-400 text-yellow-400 " />
                 ))}
-                <span className="ml-1 lg:text-base">4.9/[var(--color-)] tex5</span>
+                <span className="ml-1 lg:text-base ">4.9/5</span>
               </div>
               <p className="text-xs text-black">40+ entreprises camerounaises accompagnées</p>
             </div>
@@ -93,7 +93,7 @@ export default function Hero() {
         </div>
 
         {/* Right column — browser mockups */}
-        <div className="relative  mx-auto  w-full max-w-2xl lg:max-w-none lg:w-full lg:mx-0"> 
+        <div className=" hidden  md:flex relative  mx-auto  w-full max-w-2xl lg:max-w-none lg:w-full lg:mx-0"> 
            <div className="absolute z-10 rotate-[15deg] h-10 mt-4 -right-4 -top-6 hidden w-40 rotate-3 rounded-xl border border-white/10 bg-[var(--color-bleu)] p-3 text-[10px] font-semibold uppercase tracking-wide text-white shadow-2xl backdrop-blur sm:block lg:flex justify-center items-center">
             Facebook Ads · Kamer Food
           </div>
