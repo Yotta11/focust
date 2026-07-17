@@ -5,6 +5,7 @@ import Cases from './components/Cases'
 import Process from './components/Process'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Temoignages from './components/Temoignages'
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
         <Services />
         <Cases />
         <Process />
+         <Temoignages />
+        {/* <Temoignages /> */}
         <Contact />
       </main>
       <Footer />
