@@ -63,7 +63,7 @@ export default function Temoignages() {
             id="temoignages"
             ref={ref}
             data-in={inView}
-            className="tm relative w-full overflow-hidden bg-white py-20 md:py-28"
+            className="tm border-t border-[var(--color-bleu)] relative w-full overflow-hidden bg-white py-20 md:py-28"
         >
             <style>{`
         .fade{ opacity:0; }

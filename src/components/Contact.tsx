@@ -132,7 +132,7 @@ export default function Contact() {
         {/* ------------------------------ Colonne gauche ------------------------------ */}
         <div ref={left.ref}>
           <span
-            className={`text-xs font-semibold uppercase tracking-[0.2em] text-sky-accent ${reveal(
+            className={`text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)] ${reveal(
               left.inView
             )}`}
           >

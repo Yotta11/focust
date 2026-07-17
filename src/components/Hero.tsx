@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 md:h-16 rounded-full bg-[var(--color-primary)] px-6 py-3.5 md:text-sm lg:text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
+              className="inline-flex items-center justify-center gap-2 md:h-14 rounded-full bg-[var(--color-primary)] px-6 py-3.5 md:text-sm lg:text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
             >
 
               Démarrer mon projet
@@ -59,9 +59,9 @@ export default function Hero() {
             </a>
             <a
               href="#realisations"
-              className="inline-flex items-center justify-center gap-2 md:h-16 rounded-full border border-[var(--color-primary)] px-6 py-3.5 md:text-sm text-base font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-bleu)]"
+              className="inline-flex items-center justify-center gap-2 md:h-14 rounded-full border border-[var(--color-primary)] px-6 py-3.5 md:text-sm text-base font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-bleu)]"
             >
-              <Play size={14} />
+              <Play size={16} />
               Voir nos réalisations
             </a>
           </div>

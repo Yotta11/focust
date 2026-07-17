@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
+import logo from "../assets/logo.png"
 
 const LINKS = [
   { label: 'Accueil', href: '#accueil' },
@@ -27,10 +28,10 @@ export default function Navbar() {
           : 'bg-transparent border-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between lg:w-full  px-6 py-4 lg:px-1">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between lg:w-full  px-6  lg:px-1">
         <a href="#accueil" className="flex items-center gap-2 font-display text-3xl font-bold tracking-tight text-[#3FD0F2]">
-          {/* <span className="inline-block h-2 w-2 rounded-full bg-sky-accent font-bold text-[#3FD0F2]" /> */}
-          focust
+                   <img src={logo} alt="" className='md:w-24 w-20 h-auto object-cover' />         
+                  
         </a>
 
         <div className="hidden items-center gap-8 lg:gap-16 lg:flex">
