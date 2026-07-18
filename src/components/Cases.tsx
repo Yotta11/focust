@@ -100,6 +100,7 @@ function CountUp({
   )
 }
 
+
 const TITLE = ['Des', 'résultats.', 'Pas', 'des', 'promesses.']
 
 export default function Cases() {
