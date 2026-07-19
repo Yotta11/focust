@@ -66,6 +66,7 @@ export default function Services() {
       data-inview={inView}
       className="svc relative overflow-hidden py-16 md:py-24"
     >
+
       <style>{`
         @keyframes svcUp   { from { opacity:0; transform:translateY(26px) }        to { opacity:1; transform:translateY(0) } }
         @keyframes svcWord { from { opacity:0; transform:translateY(30px) rotate(2deg) } to { opacity:1; transform:translateY(0) rotate(0) } }
@@ -159,6 +160,7 @@ export default function Services() {
               style={{ animationDelay: `${0.7 + i * 0.13}s` }}
               className="svc-card group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#001A66] to-[var(--color-primary)] p-6 shadow-lg shadow-[#001A66]/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.05] hover:border-[var(--color-hover)]/60 hover:shadow-2xl hover:shadow-[var(--color-primary)]/40"
             >
+
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-bleu)]/15 text-[var(--color-bleu)] transition-all duration-300 group-hover:rotate-[-8deg] group-hover:scale-110 group-hover:bg-[var(--color-bleu)] group-hover:text-[var(--color-roi)]">
                 <Icon size={20} />
               </div>
