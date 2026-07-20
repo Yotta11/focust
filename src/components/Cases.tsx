@@ -113,6 +113,7 @@ export default function Cases() {
       data-in={inView}
       className="cases relative w-full overflow-hidden bg-[var(--color-roi)] py-20 md:py-28"
     >
+
       <style>{`
         /* Texture de fond discrète */
         .cases::before{
@@ -200,6 +201,7 @@ export default function Cases() {
                 }`}
                 style={{ animationDelay: `${0.35 + i * 0.15}s` }}
               >
+
                 {/* Ligne d'accent supérieure qui se déploie au survol */}
                 <span className="pointer-events-none absolute left-0 top-0 h-0.5 w-0 bg-[var(--color-bleu)] transition-all duration-500 group-hover:w-full" />
 
