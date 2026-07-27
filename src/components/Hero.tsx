@@ -2,10 +2,10 @@ import { ArrowRight, Play, Star, Instagram, CheckCircle2 } from 'lucide-react'
 
 import { useState, useEffect } from "react";
 
-import image1 from "../assets/hero1.jpg";
-import image2 from "../assets/hero2.jpg";
-import image3 from "../assets/hero3.jpg";
-import image4 from "../assets/hero4.jpg"
+import image1 from "../assets/hero1.svg";
+import image2 from "../assets/hero2.svg";
+import image3 from "../assets/hero3.svg";
+import image4 from "../assets/hero4.svg"
 
 const images = [image1, image2, image3, image4];
 
@@ -29,7 +29,7 @@ export default function Hero() {
     <section id="accueil" className=" relative overflow-hidden bg-[linear-gradient(135deg,#E6F9FF_40%,#ffffff_100%)]">
       <div className="  pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(88, 163, 180, 0.15),transparent_45%)]" />
 
-      <div className="relative mx-auto grid justify-center  md:grid-cols-2  gap-16 px-6 pb-20 pt-16 lg:grid-cols-[1.05fr,0.95fr] lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
+      <div className="relative mx-auto flex flex-row justify-center  gap-16 px-6 pb-20 pt-16  lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
         {/* Left column */}
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-hover)]  px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-hover)]">
@@ -100,14 +100,13 @@ export default function Hero() {
 
 
 {/* images */}
-          <div className=" hidden  md:flex  rounded-xl h-full w-full overflow-hidden">
-            <img
-              src={images[current]}
-              alt=""
-              className="w-full h-full object-cover transition-all duration-1000 opacity-70"
-            />
-          </div>
-
+          <div className="hidden md:flex md:flex-1 w-full h-full md:items-center lg:h-[70vh] overflow-hidden">
+                <img
+                     src={images[current]}
+                         alt=""
+                   className="w-full h-full object-cover transition-all duration-1000"
+                   />
+           </div>
           
 
 
