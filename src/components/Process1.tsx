@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import videoMp4 from '../assets/video.mp4'
 
 type Step = { n: string; title: string; desc: string }
 
@@ -51,27 +50,13 @@ const TITLE = ['Un', 'déroulé', 'clair,', 'du', 'premier', 'appel', 'à', 'la'
 
 export default function Process() {
   const { ref, inView } = useInView<HTMLElement>()
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  /* La vidéo ne tourne que quand la section est visible : moins de CPU,
-     moins de batterie. Et jamais si l'utilisateur a réduit les animations. */
-  useEffect(() => {
-    const v = videoRef.current
-    if (!v) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      v.pause()
-      return
-    }
-    if (inView) void v.play().catch(() => {})
-    else v.pause()
-  }, [inView])
 
   return (
     <section
       id="processus"
       ref={ref}
       data-in={inView}
-      className="proc relative isolate w-full overflow-hidden py-20 md:py-28"
+      className="proc relative w-full overflow-hidden bg-white py-20 md:py-28"
     >
       <style>{`
         /* Eyebrow */
@@ -112,46 +97,14 @@ export default function Process() {
         .proc[data-in="true"] .line-fill{ animation:draw 1.3s ease forwards .35s; }
         @keyframes draw{ to{ transform:scaleX(1) } }
 
-        /* Vidéo de fond : floutée, agrandie pour masquer les bords rongés par
-           le flou, révélée en fondu quand la 1re image est prête.
-           Deux curseurs à régler : blur 10–24px, opacité finale .4–.7 */
-        .bg-video{
-          opacity:0;
-          filter:blur(10px);
-          transform:scale(1.15);
-          transition:opacity 1s ease;
-        }
-        .bg-video[data-ready="true"]{ opacity:.6; }
-
         @media (prefers-reduced-motion:reduce){
           .fade,.mask>span,.step,.s-title,.s-desc,.dot,.line-fill{ animation:none!important; opacity:1!important; transform:none!important; }
           .group:hover .dot::before{ animation:none!important; }
-          .bg-video{ transition:none!important; }
         }
       `}</style>
 
-      {/* ---------- Fond vidéo ---------- */}
-      <div className="absolute inset-0 -z-10 bg-white">
-        <video
-          ref={videoRef}
-          className="bg-video h-full w-full object-cover"
-          src={videoMp4}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-          tabIndex={-1}
-          onLoadedData={(e) => e.currentTarget.setAttribute('data-ready', 'true')}
-        />
-
-        {/* Voile clair : le flou fait l'essentiel, celui-ci ne fait qu'unifier */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white/75" />
-      </div>
-
-      <div className="pointer-events-none absolute -top-24 right-0 -z-10 h-80 w-80 rounded-full bg-[var(--color-bleu)]/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 -left-24 -z-10 h-80 w-80 rounded-full bg-[var(--color-primary)]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-24 right-0 h-80 w-80 rounded-full bg-[var(--color-bleu)]/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 -left-24 h-80 w-80 rounded-full bg-[var(--color-primary)]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
@@ -174,7 +127,7 @@ export default function Process() {
         {/* Timeline */}
         <div className="relative mt-16">
           <div
-            className="absolute top-7 hidden h-0.5 rounded-full bg-slate-900/10 lg:block"
+            className="absolute top-7 hidden h-0.5 rounded-full bg-slate-200 lg:block"
             style={{ left: '12.5%', right: '12.5%' }}
           />
           <div
@@ -203,7 +156,7 @@ export default function Process() {
                   {s.title}
                 </h3>
                 <p
-                  className="s-desc mt-2 max-w-xs text-sm font-semibold leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-slate-800"
+                  className="s-desc mt-2 max-w-xs text-sm leading-relaxed text-slate-500 transition-colors duration-300 group-hover:text-slate-700"
                   style={{ animationDelay: `${0.65 + i * 0.14}s` }}
                 >
                   {s.desc}
