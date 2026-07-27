@@ -37,7 +37,7 @@ export default function Hero() {
     <section id="accueil" className=" relative overflow-hidden bg-[linear-gradient(135deg,#E6F9FF_40%,#ffffff_100%)]">
       <div className="  pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(88, 163, 180, 0.15),transparent_45%)]" />
 
-      <div className="relative mx-auto flex flex-row justify-center  gap-16 px-6 pb-20 pt-16  lg:gap-8 lg:px-32 lg:pb-28 lg:pt-20 lg:w-full">
+      <div className="relative mx-auto flex flex-row justify-center  gap-16 px-6 pb-20 pt-16  lg:gap-4 lg:px-28 lg:pb-28 lg:pt-20 lg:w-full">
         {/* Left column */}
         <div className="max-w-xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-hover)]  px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-hover)]">
