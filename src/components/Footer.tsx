@@ -1,5 +1,5 @@
 import { Instagram, Facebook } from 'lucide-react'
-import logo  from "../assets/logo.png"
+import logo  from "../assets/logo2.png"
 
 export default function Footer() {
   return (
