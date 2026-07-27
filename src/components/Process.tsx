@@ -117,7 +117,7 @@ export default function Process() {
            Deux curseurs à régler : blur 10–24px, opacité finale .4–.7 */
         .bg-video{
           opacity:0;
-          filter:blur(10px);
+          filter:blur(14px);
           transform:scale(1.15);
           transition:opacity 1s ease;
         }

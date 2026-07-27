@@ -1,5 +1,5 @@
 import { ArrowRight, Play, Star, Instagram, CheckCircle2 } from 'lucide-react'
-
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import image1 from "../assets/hero1.svg";
@@ -14,7 +14,15 @@ const AVATARS = [
   { initials: 'JK', color: 'bg-sky-soft/90 text-navy-950' },
   { initials: 'AB', color: 'bg-navy-600 text-white' },
 ]
-
+const words = [
+  "On",
+  "rend",
+  "votre",
+  "marque",
+  "impossible",
+  "à",
+  "ignorer."
+];
 export default function Hero() {
   const [current, setCurrent] = useState(0);
 
@@ -37,11 +45,32 @@ export default function Hero() {
             Agence digitale · Yaoundé
           </span>
 
-          <h1 className="text-black mt-6 font-display text-5xl font-semibold leading-[1.05] text-black sm:text-6xl">
-            On rend votre marque{' '}
-            <span className="text-[var(--color-primary)]">impossible à ignorer.</span>
-          </h1>
-
+          <h1 className="mt-6 text-5xl sm:text-6xl font-semibold leading-tight flex flex-wrap gap-x-3">
+      {words.map((word, index) => (
+        <motion.span
+          key={index}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: [0, -8, 0],
+            opacity: 1,
+            color: [
+              "#111827",       // noir
+              "#2563EB",       // bleu
+              "#001A66",       // noir
+            ],
+          }}
+          transition={{
+            delay: index * 0.3,
+            duration: 1.2,
+            repeat: Infinity,
+            repeatDelay: words.length * 0.3,
+          }}
+          className="inline-block"
+        >
+          {word}
+        </motion.span>
+      ))}
+    </h1>
           <p className="mt-6 text-balance text-lg leading-relaxed text-black">
             Sites web rapides, campagnes Facebook &amp; TikTok rentables, pages
             réseaux animées. Focust transforme votre visibilité en clients
@@ -109,49 +138,6 @@ export default function Hero() {
            </div>
           
 
-
-{/* 
-          <div className="relative z-10 mt-10 rounded-2xl border border-white/10 bg-sand shadow-2xl">
-            <div className="flex items-center gap-2 rounded-t-2xl border-b border-black/5 bg-white px-4 py-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-              <span className="ml-3 truncate text-xs text-navy-950/50">focustagency.com</span>
-            </div>
-            <div className="space-y-6 rounded-b-2xl bg-white p-6">
-              <div className="flex items-center justify-between text-[11px] font-semibold text-navy-950/60">
-                <span className="font-display text-sm text-navy-950">focust</span>
-                <div className="hidden items-center gap-3 sm:flex">
-                  <span>Services</span>
-                  <span>Cas</span>
-                  <span>Blog</span>
-                  <span className="rounded-full bg-[var(--color-primary)] px-3 py-1 text-navy-950">Devis</span>
-                </div>
-              </div>
-              <div>
-                <p className="font-display text-2xl font-semibold leading-tight text-navy-950">
-                  On rend votre marque
-                </p>
-                <p className="font-display text-2xl font-semibold leading-tight text-[var(--color-primary)]">
-                  impossible à ignorer.
-                </p>
-              </div>
-              <div className="h-px w-full bg-navy-950/10" />
-              <div className="flex flex-wrap gap-3">
-                <span className="rounded-full bg-navy-950 px-4 py-2 text-xs font-semibold text-white">
-                  Démarrer mon projet
-                </span>
-                <span className="rounded-full border border-navy-950/15 px-4 py-2 text-xs font-semibold text-navy-950">
-                  Réalisations
-                </span>
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="h-10 rounded-lg bg-navy-950/5" />
-                ))}
-              </div>
-            </div>
-          </div> */}
 
           <div className=" hidden md:flex absolute -left-6 top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-2xl bg-white shadow-xl sm:-left-8">
             <Instagram size={24} className="text-[var(--color-primary)]" />
