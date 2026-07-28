@@ -13,6 +13,7 @@ import Page2 from './pages/Page2'
 import Page3 from './pages/Page3'
 import Page4 from './pages/Page4'
 import Page5 from './pages/Page5'
+import Page6 from './pages/Page6'
 
 function PageIntrouvable() {
   return (
@@ -41,23 +42,25 @@ export default function App() {
       {/* Route « pathless » : ne correspond à aucune URL, sert de coquille.
           Ses enfants s'affichent à l'endroit du <Outlet /> dans Layout.tsx,
           ce qui rend navbar et footer une seule fois pour toutes les pages. */}
-     
-        <Route index element={<Page1 />} />
-        <Route path="services" element={<Page2 />} />
-        <Route path="realisations" element={<Page3 />} />
-        <Route path="processus" element={<Page4 />} />
-        <Route path="contact" element={<Page5 />} />
 
-        {/* Alias vers les URLs canoniques. `replace` évite que le bouton
+      <Route index element={<Page1 />} />
+      <Route path="services" element={<Page2 />} />
+      <Route path="realisations" element={<Page3 />} />
+      <Route path="processus" element={<Page4 />} />
+      <Route path="contact" element={<Page5 />} />
+      <Route path="formation" element={<Page6 />} />
+
+      {/* Alias vers les URLs canoniques. `replace` évite que le bouton
             Retour reste coincé sur l'alias qui redirige en boucle. */}
-        <Route path="page1" element={<Navigate to="/" replace />} />
-        <Route path="page2" element={<Navigate to="/services" replace />} />
-        <Route path="page3" element={<Navigate to="/realisations" replace />} />
-        <Route path="page4" element={<Navigate to="/processus" replace />} />
-        <Route path="page5" element={<Navigate to="/contact" replace />} />
+      <Route path="page1" element={<Navigate to="/" replace />} />
+      <Route path="page2" element={<Navigate to="/services" replace />} />
+      <Route path="page3" element={<Navigate to="/realisations" replace />} />
+      <Route path="page4" element={<Navigate to="/processus" replace />} />
+      <Route path="page5" element={<Navigate to="/contact" replace />} />
+      <Route path="page6" element={<Navigate to="/formations" replace />} />
 
-        <Route path="*" element={<PageIntrouvable />} />
-      
+      <Route path="*" element={<PageIntrouvable />} />
+
     </Routes>
   )
 }

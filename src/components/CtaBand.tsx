@@ -15,7 +15,7 @@ export default function CtaBand({
   const { ref, inView } = useInView<HTMLElement>(0.2)
 
   return (
-    <section ref={ref} data-in={inView} className="px-6 py-20 lg:px-10 md:py-28">
+    <section ref={ref} data-in={inView} className="px-6 py-20 lg:px-10 md:py-28 ">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-[var(--color-roi)] px-8 py-16 text-center md:px-16">
         <div className="pointer-events-none absolute -top-24 -right-16 h-72 w-72 rounded-full bg-[var(--color-bleu)]/25 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-[var(--color-primary)]/30 blur-3xl" />

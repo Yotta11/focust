@@ -1,59 +1,53 @@
-/* Contenu éditorial centralisé : la page Accueil pioche dedans pour ses
-   aperçus, les pages dédiées affichent tout. Une seule source de vérité. */
+/* Contenu éditorial centralisé : une seule source de vérité pour l'accueil,
+   la page Services et la page Formations. */
 
 export type Service = {
   slug: string
+  /** Nom de l'icône lucide-react, résolu dans la page */
+  icone: 'Globe' | 'PenTool' | 'GraduationCap' | 'MessagesSquare'
   title: string
   pitch: string
   delivrables: string[]
   delai: string
+  /** Si renseigné, la carte pointe vers cette route au lieu du contact */
+  lien?: string
 }
 
 export const SERVICES: Service[] = [
   {
     slug: 'sites-web',
-    title: 'Sites web rapides',
+    icone: 'Globe',
+    title: 'Création de sites web',
     pitch:
-      'Un site qui charge en moins de deux secondes sur une connexion 3G, parce que c’est celle de la majorité de vos clients.',
+      'Vitrines et boutiques en ligne qui chargent en moins de deux secondes sur une connexion 3G — celle de la majorité de vos clients.',
     delivrables: [
       'Design sur mesure, validé avant développement',
       'Version mobile pensée en premier',
       'Formulaire relié à votre WhatsApp Business',
       'Formation à la mise à jour du contenu',
     ],
-    delai: '12 jours ouvrés',
+    delai: '7 à 14 jours',
   },
   {
-    slug: 'facebook-ads',
-    title: 'Campagnes Facebook & Instagram',
+    slug: 'creation-contenu',
+    icone: 'PenTool',
+    title: 'Création de contenu',
     pitch:
-      'Des campagnes construites sur vos marges réelles, pas sur des impressions. On coupe ce qui ne convertit pas.',
+      'Photos, vidéos verticales et visuels écrits pour le scroll. Tournés pour la plateforme, pas recyclés d’un support à l’autre.',
     delivrables: [
-      'Audit du compte publicitaire existant',
-      'Ciblage bâti sur vos clients actuels',
-      'Trois visuels testés par audience',
-      'Rapport chiffré chaque semaine',
-    ],
-    delai: 'Premiers résultats sous 10 jours',
-  },
-  {
-    slug: 'tiktok-ads',
-    title: 'TikTok & contenus courts',
-    pitch:
-      'Le format qui coûte le moins cher au Cameroun en ce moment. Encore faut-il tourner pour la plateforme, pas pour la télévision.',
-    delivrables: [
-      'Scénarios écrits pour le scroll',
+      'Scénarios écrits avant tournage',
       'Tournage et montage vertical',
       'Sous-titres intégrés',
-      'Déclinaison Reels et Shorts',
+      'Déclinaison Reels, Shorts et TikTok',
     ],
-    delai: '8 vidéos par mois',
+    delai: '8 contenus par mois',
   },
   {
-    slug: 'reseaux-sociaux',
-    title: 'Animation de pages',
+    slug: 'gestion-pages',
+    icone: 'MessagesSquare',
+    title: 'Gestion de pages',
     pitch:
-      'Publier régulièrement ne suffit pas. On répond aux commentaires, on relance les messages privés, on transforme l’audience en commandes.',
+      'Publier ne suffit pas. On répond aux commentaires, on relance les messages privés, on transforme l’audience en commandes.',
     delivrables: [
       'Calendrier éditorial mensuel',
       'Visuels aux couleurs de votre marque',
@@ -63,32 +57,128 @@ export const SERVICES: Service[] = [
     delai: 'Engagement mensuel',
   },
   {
-    slug: 'identite',
-    title: 'Identité visuelle',
+    slug: 'formation',
+    icone: 'GraduationCap',
+    title: 'Formation',
     pitch:
-      'Logo, palette, typographies et modèles réutilisables. De quoi rester reconnaissable partout où vous publiez.',
+      'Six modules pour internaliser ce que nous faisons. Pour les équipes qui veulent apprendre plutôt que déléguer indéfiniment.',
     delivrables: [
-      'Trois pistes de logo',
-      'Charte graphique en PDF',
-      'Modèles Canva prêts à l’emploi',
-      'Fichiers sources livrés',
+      'Sessions en présentiel à Yaoundé ou à distance',
+      'Groupes de huit personnes maximum',
+      'Exercices sur vos propres projets',
+      'Attestation en fin de parcours',
     ],
-    delai: '3 semaines',
-  },
-  {
-    slug: 'conseil',
-    title: 'Accompagnement stratégique',
-    pitch:
-      'Pour les équipes qui gèrent déjà leur communication en interne et veulent un regard extérieur chaque mois.',
-    delivrables: [
-      'Point mensuel de deux heures',
-      'Lecture des chiffres avec vous',
-      'Priorités du mois écrites',
-      'Accès direct par WhatsApp',
-    ],
-    delai: 'Sans engagement',
+    delai: '6 modules disponibles',
+    lien: '/formations',
   },
 ]
+
+/* ---------------------------------------------------------- */
+
+export type Formation = {
+  slug: string
+  icone: 'Globe' | 'PenTool' | 'Megaphone' | 'MessagesSquare' | 'Clapperboard' | 'Palette'
+  title: string
+  pitch: string
+  duree: string
+  niveau: 'Débutant' | 'Intermédiaire' | 'Tous niveaux'
+  programme: string[]
+}
+
+export const FORMATIONS: Formation[] = [
+  {
+    slug: 'creation-site-web',
+    icone: 'Globe',
+    title: 'Création de site web',
+    pitch:
+      'Construire et mettre en ligne un site présentable sans écrire de code, puis savoir le faire évoluer seul.',
+    duree: '4 jours',
+    niveau: 'Débutant',
+    programme: [
+      'Structurer les pages avant de dessiner quoi que ce soit',
+      'Prendre en main un constructeur visuel',
+      'Nom de domaine, hébergement et mise en ligne',
+      'Corriger les erreurs les plus fréquentes',
+    ],
+  },
+  {
+    slug: 'creation-contenu',
+    icone: 'PenTool',
+    title: 'Création de contenu',
+    pitch:
+      'Produire des photos et des textes qui tiennent la comparaison avec les grandes marques, à partir d’un téléphone.',
+    duree: '3 jours',
+    niveau: 'Débutant',
+    programme: [
+      'Cadrage et lumière naturelle en intérieur',
+      'Écrire une accroche qui arrête le pouce',
+      'Construire une banque de contenus d’avance',
+      'Retouche mobile en dix minutes',
+    ],
+  },
+  {
+    slug: 'marketing-digital',
+    icone: 'Megaphone',
+    title: 'Marketing digital',
+    pitch:
+      'Comprendre ce qui fait qu’une campagne rapporte de l’argent, et savoir couper celle qui n’en rapporte pas.',
+    duree: '5 jours',
+    niveau: 'Intermédiaire',
+    programme: [
+      'Calculer son coût d’acquisition réel',
+      'Créer et cibler une campagne Facebook',
+      'Lire les indicateurs sans se noyer dedans',
+      'Décider quand arrêter un test',
+    ],
+  },
+  {
+    slug: 'community-management',
+    icone: 'MessagesSquare',
+    title: 'Community management',
+    pitch:
+      'Animer une page au quotidien : rythme de publication, réponses, gestion des commentaires difficiles.',
+    duree: '3 jours',
+    niveau: 'Tous niveaux',
+    programme: [
+      'Bâtir un calendrier éditorial tenable',
+      'Répondre aux avis négatifs sans envenimer',
+      'Transformer un commentaire en commande',
+      'Mesurer l’engagement qui compte vraiment',
+    ],
+  },
+  {
+    slug: 'montage-video',
+    icone: 'Clapperboard',
+    title: 'Montage de vidéo',
+    pitch:
+      'Monter des formats courts rythmés, sous-titrés et exportés au bon format pour chaque plateforme.',
+    duree: '4 jours',
+    niveau: 'Débutant',
+    programme: [
+      'Dérushage rapide et sélection des plans',
+      'Rythme, coupes et transitions sobres',
+      'Sous-titres automatiques puis corrigés',
+      'Exports verticaux, carrés et horizontaux',
+    ],
+  },
+  {
+    slug: 'design',
+    icone: 'Palette',
+    title: 'Design',
+    pitch:
+      'Les règles visuelles qui séparent un visuel amateur d’un visuel professionnel : hiérarchie, espace, couleur.',
+    duree: '4 jours',
+    niveau: 'Débutant',
+    programme: [
+      'Hiérarchie visuelle et lisibilité',
+      'Choisir et associer deux typographies',
+      'Construire une palette cohérente',
+      'Créer des modèles réutilisables',
+    ],
+  },
+]
+
+/* ---------------------------------------------------------- */
 
 export type Projet = {
   client: string

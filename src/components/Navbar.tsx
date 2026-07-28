@@ -12,6 +12,7 @@ const LINKS = [
   { label: 'Réalisations', to: '/realisations' },
   { label: 'Processus', to: '/processus' },
   { label: 'Contact', to: '/contact' },
+    { label: 'Formation', to: '/formation' },
 ]
 
 export default function Navbar() {

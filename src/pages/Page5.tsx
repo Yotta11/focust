@@ -203,7 +203,7 @@ export default function Page5() {
               </p>
               <a
                 href="https://wa.me/237600000000"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[var(--color-roi)] transition-transform duration-300 hover:-translate-y-0.5"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm  text-white transition-transform duration-300 hover:-translate-y-0.5 bg-green-500"
               >
                 Ouvrir WhatsApp
                 <span aria-hidden="true">→</span>
@@ -212,7 +212,7 @@ export default function Page5() {
 
             <dl className="space-y-5 rounded-3xl border border-slate-200 p-8">
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Téléphone
                 </dt>
                 <dd className="mt-1">
@@ -220,12 +220,12 @@ export default function Page5() {
                     href="tel:+237600000000"
                     className="text-[15px] text-[var(--color-roi)] hover:text-[var(--color-primary)]"
                   >
-                    +237 6 00 00 00 00
+                    +237 6 86856648
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   E-mail
                 </dt>
                 <dd className="mt-1">
@@ -233,25 +233,25 @@ export default function Page5() {
                     href="mailto:bonjour@focust.cm"
                     className="text-[15px] text-[var(--color-roi)] hover:text-[var(--color-primary)]"
                   >
-                    bonjour@focust.cm
+                    contact@focustagency.com
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Bureau
                 </dt>
-                <dd className="mt-1 text-[15px] text-slate-600">
-                  Bastos, Yaoundé
+                <dd className="mt-1 text-[15px]  text-[var(--color-roi)]">
+                  Biyem-assi, Yaoundé
                   <br />
                   Sur rendez-vous uniquement
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Horaires
                 </dt>
-                <dd className="mt-1 text-[15px] text-slate-600">
+                <dd className="mt-1 text-[15px]  text-[var(--color-roi)]">
                   Lundi au vendredi, 8h – 18h
                   <br />
                   Samedi sur demande
