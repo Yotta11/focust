@@ -3,7 +3,7 @@ import MaskedTitle from './MaskedTitle'
 
 type Props = {
   eyebrow: string
-  /** Partie du titre en couleur d'accent, optionnelle */
+  
   titre: string
   accent?: string
   intro: string
@@ -37,8 +37,7 @@ export default function PageHeader({ eyebrow, titre, accent, intro }: Props) {
             ...(accent ? [{ text: accent, className: 'text-[var(--color-primary)]' }] : []),
           ]}
         />
-
-        <p
+             <p
           className="reveal mt-6 max-w-2xl text-lg leading-relaxed text-slate-600"
           style={{ animationDelay: '.45s' }}
         >

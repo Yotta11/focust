@@ -17,6 +17,7 @@ export default function Footer() {
           <a href="#" aria-label="Instagram" className="transition-colors text-[var(--color-primary)]  hover:text-[var(--color-roi)] ">
             <Instagram size={20} />
           </a>
+
           <a href="#" aria-label="Facebook" className="transition-colors text-[var(--color-primary)]  hover:text-[var(--color-roi)] ">
             <Facebook size={20} />
           </a>
