@@ -31,7 +31,7 @@ function Timeline() {
       data-in={inView}
       className="relative isolate w-full overflow-hidden py-20 md:py-28"
     >
-      {/* ---------- Fond vidéo ---------- */}
+     
       <div className="absolute inset-0 -z-10 bg-white">
         <video
           ref={videoRef}

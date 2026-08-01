@@ -40,9 +40,6 @@ const COULEUR_NIVEAU: Record<string, string> = {
   'Tous niveaux': 'bg-slate-100 text-slate-600 ring-slate-200',
 }
 
-/* ------------------------------------------------------------------ */
-/*  Modules                                                            */
-/* ------------------------------------------------------------------ */
 
 function Modules() {
   const { ref, inView } = useInView<HTMLElement>(0.08)

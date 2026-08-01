@@ -20,8 +20,6 @@ export default function Page5() {
     const data = Object.fromEntries(new FormData(e.currentTarget))
 
     try {
-      // Branche ici ton endpoint réel (Formspree, Resend, ton API…).
-      // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
       console.log('Demande de devis', data)
       await new Promise((r) => setTimeout(r, 700))
       setEtat('envoye')
