@@ -34,9 +34,6 @@ const SERVICES = [
   'Autre',
 ]
 
-/* -------------------------------------------------------------------------- */
-/*  Hook : révélation au scroll (staggered fade + slide-up), sans dépendance   */
-/* -------------------------------------------------------------------------- */
 function useInView<T extends HTMLElement>(
   options: IntersectionObserverInit = { threshold: 0.15 }
 ) {
@@ -64,9 +61,7 @@ const reveal = (inView: boolean) =>
     inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
   }`
 
-/* -------------------------------------------------------------------------- */
-/*  Cartes de contact (colonne de gauche)                                      */
-/* -------------------------------------------------------------------------- */
+
 const CONTACTS = [
   {
     icon: MessageCircle,
