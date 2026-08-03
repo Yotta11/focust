@@ -16,7 +16,7 @@ function Grille() {
 
   return (
     <section ref={ref} data-in={inView} className="mx-auto max-w-7xl px-6 py-16 lg:px-10 md:py-24">
-      <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
         {SERVICES.map((s, i) => (
           <ServiceCard key={s.slug} service={s} index={i} />
         ))}

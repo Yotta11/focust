@@ -1,8 +1,8 @@
-
 import { useMemo, useState } from 'react'
 import { useInView } from '../lib/useInView'
 import PageHeader from '../components/Navbar'
 import CtaBand from '../components/CtaBand'
+import PartnersMarquee from '../components/PartnersMarquee'
 import { PROJETS } from '../lib/content'
 
 const FILTRES = ['Tous', 'Commerce', 'Restauration', 'Services juridiques', 'Mode'] as const
@@ -91,6 +91,7 @@ export default function Page3() {
         accent="qu’on peut vérifier."
         intro="Quatre projets menés à Yaoundé et Douala, avec les chiffres tels qu’ils sont sortis. Nous pouvons vous mettre en relation avec ces clients si vous souhaitez leur poser des questions directement."
       />
+      <PartnersMarquee />
       <Projets />
       <CtaBand
         titre="Votre projet ressemble à l’un d’eux ?"
