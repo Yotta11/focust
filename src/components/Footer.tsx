@@ -7,10 +7,8 @@ export default function Footer() {
 
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 text-sm text-gray-300 sm:flex-row lg:px-10">
         <a href="#accueil" className="flex items-center gap-2 font-display text-lg font-semibold text-white">
-          <img src={logo} alt="" className='w-16 md:w-20 h-auto object-cover' />         
-         
+          <img src={logo} alt="" className='w-16 md:w-20 h-auto object-cover' />           
         </a>
-
         <p>© {new Date().getFullYear()} Focust Agency — Yaoundé, Cameroun. Tous droits réservés.</p>
 
         <div className="flex items-center gap-4">

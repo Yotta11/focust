@@ -263,7 +263,6 @@ export default function Cases() {
                   </p>
                 </div>
               </div>
-
             )
           })}
         </div>
