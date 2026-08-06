@@ -1,7 +1,3 @@
-/* ============================================================
-   PAGE 2 — Services         route : /services
-   ============================================================ */
-
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useInView } from '../lib/useInView'
@@ -25,7 +21,7 @@ function Grille() {
   )
 }
 
-/* Passerelle vers la page Formations */
+
 function ApercuFormations() {
   const { ref, inView } = useInView<HTMLElement>(0.15)
 
